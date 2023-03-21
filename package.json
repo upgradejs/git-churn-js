@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "author": "Kostiantyn Popovych <kostiantyn.popovych.exp@gmail.com> (https://github.com/KostiantynPopovych)",
   "description": "Analyze file churn in Git repos with GitChurnJS's JS/TS API, identifying frequently modified files and aiding in detecting code instability or technical debt.",
+  "repository": "git@github.com:upgradejs/git-churn-js",
+  "bugs": "https://github.com/upgradejs/git-churn-js/issues",
   "license": "MIT",
   "engines": {
     "node": ">=8"
