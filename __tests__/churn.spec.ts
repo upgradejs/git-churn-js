@@ -1,4 +1,4 @@
-import Churn from "src/churn";
+import Churn from "@core/churn";
 
 describe("Churn", () => {
   it("should increment changes by 1", () => {

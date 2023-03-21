@@ -1,4 +1,4 @@
-import GitChurn from "src";
+import GitChurn from "@core/index";
 
 describe("GitChurn", () => {
   it("should get churn by path", () => {

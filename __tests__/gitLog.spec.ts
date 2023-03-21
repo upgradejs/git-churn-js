@@ -1,4 +1,4 @@
-import GitLog from "src/gitLog";
+import GitLog from "@core/gitLog";
 
 describe("GitLog", () => {
   it("should get history of files", () => {
@@ -10,6 +10,5 @@ describe("GitLog", () => {
     expect(history).toContain("src/churnCollection.ts");
     expect(history).toContain("src/gitLog.ts");
     expect(history).toContain("src/index.ts");
-
   });
 });

@@ -1,10 +1,13 @@
 module.exports = {
-  "moduleDirectories": [
+  moduleDirectories: [
     "node_modules",
     "<rootDir>"
   ],
-  "transform": {
+  transform: {
     "^.+\\.(t|j)s$": "ts-jest"
   },
-  "coverageDirectory": "coverage",
+  moduleNameMapper: {
+    '^@core/(.*)$': '<rootDir>/src/$1'
+  },
+  coverageDirectory: "coverage",
 }
