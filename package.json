@@ -7,11 +7,11 @@
   "bugs": "https://github.com/upgradejs/git-churn-js/issues",
   "license": "MIT",
   "engines": {
-    "node": ">=8"
+    "node": ">=6"
   },
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "npx ts-node build.ts",
+    "build": "npx ts-node scripts/build.ts",
     "test": "jest"
   },
   "keywords": [
@@ -42,7 +42,6 @@
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
-    "@types/micromatch": "^4.0.2",
     "@types/node": "^18.15.5",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.55.0",
@@ -55,8 +54,5 @@
     "ts-jest": "^29.0.5",
     "tsup": "^6.7.0",
     "typescript": "^4.9.5"
-  },
-  "dependencies": {
-    "micromatch": "^4.0.5"
   }
 }

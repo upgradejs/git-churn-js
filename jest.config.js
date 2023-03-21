@@ -9,5 +9,6 @@ module.exports = {
   moduleNameMapper: {
     '^@core/(.*)$': '<rootDir>/src/$1'
   },
-  coverageDirectory: "coverage",
+  collectCoverage: true,
+  coverageReporters: ["text"],
 }

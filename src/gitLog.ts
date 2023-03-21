@@ -1,7 +1,6 @@
 import { execSync } from "child_process";
 import { existsSync } from "fs";
-import { resolve } from "path";
-import micromatch from "micromatch";
+import { join, resolve } from "path";
 import { IGitChurnOptions, IGitLog } from "./types";
 
 class GitLog implements IGitLog {
@@ -15,8 +14,7 @@ class GitLog implements IGitLog {
     const gitLogCommand = this.buildGitLogCommand();
     const stdout = execSync(gitLogCommand, {encoding: 'utf8', maxBuffer: 32_000_000});
 
-    return stdout
-      .split('\n')
+    return [...new Set(stdout.split('\n'))]
       .filter(line => line.trim().length > 0 &&
         this.pathStillExists(line) &&
         this.filterMatches(line))
@@ -38,8 +36,9 @@ class GitLog implements IGitLog {
   }
 
   filterMatches(file: string): boolean {
+    const fullPathFile = join(this.options.directory, file);
     if (this.options.filter && this.options.filter.length) {
-      return this.options.filter.every(f => micromatch.isMatch(file, f));
+      return this.options.filter.every(f => fullPathFile.includes(f));
     }
 
     return true;
