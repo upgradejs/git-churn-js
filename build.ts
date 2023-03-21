@@ -1,22 +1,20 @@
-import * as esbuild from 'tsup';
-import packageJSON from './package.json' assert { type: "json" };
+import { Options, build } from 'tsup';
 
-const baseConfig = {
+const baseConfig: Options = {
   entryPoints: ['./src/index.ts'],
   bundle: true,
   platform: 'node',
+  outDir: 'dist'
 };
 
 Promise.all([
-  esbuild.build({
+  build({
     ...baseConfig,
     format: 'esm',
     dts: true,
-    outfile: packageJSON.module,
   }),
-  esbuild.build({
+  build({
     ...baseConfig,
     format: 'cjs',
-    outfile: packageJSON.main
   })
 ])
