@@ -1,6 +1,6 @@
-import { execSync } from "node:child_process";
-import { existsSync } from "node:fs";
-import { resolve } from "node:path";
+import { execSync } from "child_process";
+import { existsSync } from "fs";
+import { resolve } from "path";
 import micromatch from "micromatch";
 import { IGitChurnOptions, IGitLog } from "./types";
 

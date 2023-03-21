@@ -13,7 +13,7 @@ export interface IChurn {
   getValue(): number;
 }
 
-export interface IGitChurn {
+export interface IGitChurnJS {
   options: IGitChurnOptions;
   history: string[];
   churnCollection: IChurnCollection;

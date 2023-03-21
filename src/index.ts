@@ -1,9 +1,9 @@
-import { IGitChurnOptions, IChurnCollection, IGitChurn } from "./types";
+import { IGitChurnOptions, IChurnCollection, IGitChurnJS } from "./types";
 import GitLog from "./gitLog";
 import ChurnCollection from "./churnCollection";
 import Churn from "./churn";
 
-class GitChurn implements IGitChurn {
+class GitChurnJS implements IGitChurnJS {
   options: IGitChurnOptions;
   history: string[];
   churnCollection: IChurnCollection;
@@ -24,4 +24,4 @@ class GitChurn implements IGitChurn {
   }
 }
 
-export default GitChurn;
+export default GitChurnJS;

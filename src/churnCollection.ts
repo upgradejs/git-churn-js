@@ -1,5 +1,5 @@
 import Churn from "./churn";
-import { join } from "node:path";
+import { join } from "path";
 import { IGitChurnOptions, IChurn, IChurnCollection } from "./types";
 
 class ChurnCollection implements IChurnCollection {
