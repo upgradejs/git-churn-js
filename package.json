@@ -1,6 +1,6 @@
 {
   "name": "git-churn-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Kostiantyn Popovych <kostiantyn.popovych.exp@gmail.com> (https://github.com/KostiantynPopovych)",
   "description": "Analyze file churn in Git repos with GitChurnJS's JS/TS API, identifying frequently modified files and aiding in detecting code instability or technical debt.",
   "repository": "git@github.com:upgradejs/git-churn-js",
@@ -10,9 +10,10 @@
     "node": ">=6"
   },
   "scripts": {
+    "test": "jest",
     "prebuild": "rimraf dist",
     "build": "npx ts-node scripts/build.ts",
-    "test": "jest"
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "inspection",

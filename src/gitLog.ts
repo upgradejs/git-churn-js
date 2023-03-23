@@ -14,7 +14,8 @@ class GitLog implements IGitLog {
     const gitLogCommand = this.buildGitLogCommand();
     const stdout = execSync(gitLogCommand, {encoding: 'utf8', maxBuffer: 32_000_000});
 
-    return [...new Set(stdout.split('\n'))]
+    return stdout
+      .split('\n')
       .filter(line => line.trim().length > 0 &&
         this.pathStillExists(line) &&
         this.filterMatches(line))
