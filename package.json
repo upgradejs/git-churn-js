@@ -21,11 +21,8 @@
     "js-api"
   ],
   "files": [
-    "package.json",
-    "src",
-    "__tests__",
-    "LICENSE",
-    "README.md",
+    "src/",
+    "dist/",
     "CODE_OF_CONDUCT.md",
     "CONTRIBUTING.md",
     "CHANGELOG.md"
