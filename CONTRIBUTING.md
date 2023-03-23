@@ -8,7 +8,7 @@ cd git-churn-js
 npm install
 ```
 
-To be able to test running the CLI manually:
+To be able to test running the project locally:
 
 ```bash
 npm run build
